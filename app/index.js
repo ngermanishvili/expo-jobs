@@ -1,23 +1,45 @@
-import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import React, { useState } from 'react';
+import { View, ScrollView, SafeAreaView, Text } from 'react-native';
+import { Stack, useRouter } from 'expo-router';
+import { COLORS, icons, SIZES, images } from '../constants';
+import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome } from '../components';
+
 
 const Home = () => {
+    const router = useRouter();
     return (
-        <View style={styles.container}>
-            <Text>Alo Kokiii shena xaR??
-            </Text>
+        <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }} >
+            <Stack.Screen options={{
+                headerStyle: {
+                    backgroundColor: COLORS.lightWhite,
+                },
+                headerShadowVisible: false,
+                headerLeft: () => (
+                    <ScreenHeaderBtn iconUrl={icons.menu} dimension='60%' />
+                ),
+                headerRight: () => (
+                    <ScreenHeaderBtn iconUrl={images.profile} dimension='100%' />
+                ),
+                headerTitle: "",
 
 
-        </View>
+            }} />
+
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <View style={{
+                    flex: 1,
+                    padding: SIZES.medium,
+                }}>
+                    <Welcome />
+                    <Popularjobs />
+                    <Nearbyjobs />
+
+                </View>
+            </ScrollView>
+        </SafeAreaView>
     );
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-});
+
 
 export default Home;
