@@ -11,7 +11,7 @@ import styles from "./welcome.style";
 import { icons, SIZES } from "../../../constants";
 import { Image } from "react-native";
 
-const jobTypes = ["Full Time", "Part Time", "Contractor"];
+const jobTypes = ["სრული განაკვეთი", "ნახევარი განაკვეთი", "კონტრაქტით"];
 
 const Welcome = () => {
   const router = useRouter();
@@ -19,8 +19,8 @@ const Welcome = () => {
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.userName}>Hello, German</Text>
-        <Text style={styles.welcomeMessage}>Find your perfect job</Text>
+        <Text style={styles.userName}>გამარჯობა, გიორგი</Text>
+        <Text style={styles.welcomeMessage}>იხილეთ ვაკანსიები</Text>
       </View>
       <View style={styles.searchContainer}>
         <View style={styles.searchWrapper}>
@@ -28,7 +28,7 @@ const Welcome = () => {
             style={styles.searchInput}
             value=""
             onChange={() => {}}
-            placeholder="What are you looking for?"
+            placeholder="ძებნა"
           />
         </View>
         <TouchableOpacity style={styles.searchBtn} onPress={() => {}}>
