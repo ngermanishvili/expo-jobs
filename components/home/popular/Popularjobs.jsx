@@ -12,14 +12,12 @@ import { COLORS, SIZES } from "../../../constants";
 import PopularJobCard from "../../common/cards/popular/PopularJobCard";
 import useFetch from "../../../hook/useFetch";
 
-
 const Popularjobs = () => {
   const router = useRouter();
 
-
   const { data, isLoading, error } = useFetch("search", {
     query: "React Developer",
-    num_pages: 1
+    num_pages: 1,
   });
 
   console.log(data);
@@ -40,7 +38,7 @@ const Popularjobs = () => {
           <Text>Error</Text>
         ) : (
           <FlatList
-            data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+            data={data} // Use the fetched data here
             renderItem={({ item }) => <PopularJobCard item={item} />}
             keyExtractor={(item) => item?.job_id}
             contentContainerStyle={{ columnGap: SIZES.medium }}

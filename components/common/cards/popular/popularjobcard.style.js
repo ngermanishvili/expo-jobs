@@ -21,8 +21,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
   }),
   logoImage: {
-    width: "70%",
-    height: "70%",
+    width: "100%",
+    height: "100%",
+    borderRadius: SIZES.medium
   },
   companyName: {
     fontSize: SIZES.medium,
