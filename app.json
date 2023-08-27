@@ -8,6 +8,20 @@
       "expo-router"
     ],
     "name": "native-jobs",
-    "slug": "native-jobs"
+    "slug": "native-jobs",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "498aa7aa-4034-4fdd-946b-75af4c2c7635"
+      }
+    },
+    "android": {
+      "package": "com.ngermanishvili.nativejobs"
+    },
+    "ios": {
+      "bundleIdentifier": "com.ngermanishvili.nativejobs"
+    }
   }
 }
