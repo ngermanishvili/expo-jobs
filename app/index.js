@@ -21,8 +21,6 @@ const Home = () => {
                     <ScreenHeaderBtn iconUrl={images.profile} dimension='100%' />
                 ),
                 headerTitle: "",
-
-
             }} />
 
             <ScrollView showsVerticalScrollIndicator={false}>
@@ -33,7 +31,6 @@ const Home = () => {
                     <Welcome />
                     <Popularjobs />
                     <Nearbyjobs />
-
                 </View>
             </ScrollView>
         </SafeAreaView>
